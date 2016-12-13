@@ -15,7 +15,7 @@ class opera {
 	}
 
 	file { "/home/xubuntu/Desktop/opera.desktop":
-		content => template("/etc/puppet/modules/opera/opera-desktop"),
+		content => template("/home/xubuntu/opera/opera/opera.desktop"),
 		ensure => present,
 	}
 	
