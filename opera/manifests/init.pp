@@ -18,4 +18,10 @@ class opera {
 		content => template("/etc/puppet/modules/opera/opera-desktop"),
 		ensure => present,
 	}
+	
+	exec {reload:
+		command =>'xfdesktop --reload',
+		path => ['/usr/bin', '/usr/sbin',],
+		require => [file["/home/xubuntu/Desktop/opera.desktop"]],
+	}
 }
