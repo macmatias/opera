@@ -12,6 +12,7 @@ class opera {
 	package {'opera-stable_42.0.2393.85_amd64.deb':
 		provider => dpkg,
 		source => '/etc/puppet/modules/opera/manifests/opera-stable_42.0.2393.85_amd64.deb',
+		require => [Exec["wget"]],
 	}
 
 	file { "/home/xubuntu/Desktop/opera.desktop":
