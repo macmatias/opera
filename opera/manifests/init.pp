@@ -22,6 +22,6 @@ class opera {
 	exec {reload:
 		command =>'xfdesktop --reload',
 		path => ['/usr/bin', '/usr/sbin',],
-		require => [file["/home/xubuntu/Desktop/opera.desktop"]],
+		require => [File["/home/xubuntu/Desktop/opera.desktop"]],
 	}
 }
